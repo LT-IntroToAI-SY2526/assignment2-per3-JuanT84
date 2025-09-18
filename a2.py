@@ -27,6 +27,9 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
         # you should delete the following line
         # 1) if we reached the end of the pattern but not source
 
+        if pind == len(pattern) and sind != len(source):
+            return ("len done but not sind")
+
         # 2) if the current thing in the pattern is a %
         # WARNING: this condition contains the bulk of the code for the assignment
         # If you get stuck on this one, we encourage you to attempt the other conditions
@@ -49,9 +52,10 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
         # source
 
         else:
-            return None
-            print("End of assert, return none")
 
+            print("End of assert, return none")
+            return None
+            
     print("End of assert, return the list")
     return result
 
