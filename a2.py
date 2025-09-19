@@ -27,8 +27,10 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
         # you should delete the following line
         # 1) if we reached the end of the pattern but not source
 
-        if pind == len(pattern) and sind != len(source):
-            return ("len done but not sind")
+        if pind == len(pattern) and sind < len(source):
+            print("end of pattern, but not source")
+            return None
+        
 
         # 2) if the current thing in the pattern is a %
         # WARNING: this condition contains the bulk of the code for the assignment
@@ -37,12 +39,15 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
 
         # 3) if we reached the end of the source but not the pattern
 
-        # 4) if the current thing in the pattern is an _
+        elif sind == len(source):
+            print("end of source, but not pattern")
+            return None
 
+        # 4) if the current thing in the pattern is an _
         # 5) if the current thing in the pattern is the same as the current thing in the
         # source
 
-        if pattern[pind] == source[sind]:
+        elif pattern[pind] == source[sind]:
             print(pattern[pind], source [sind])
             pind += 1
             sind += 1
@@ -52,7 +57,6 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
         # source
 
         else:
-
             print("End of assert, return none")
             return None
             
