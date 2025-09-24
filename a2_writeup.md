@@ -13,8 +13,8 @@ This assignment is about learning and applying the while loop and iterating thro
 ## Reflection Questions
 1. What was difficult for you while completing the match function?
 
-
+What was difficult for me personally was knowing what new functions did exactly what I needed. An example was the ".join" feature. I instead was trying to push two lists into one like in java. This was somewhat difficult but after some AI help and looking it over I managed to understand overall what each section does.
 
 2. Explain how you could use the match function for extracting information from a movie database.
 
-
+We could use the match function for extracting information from a movie database by matching certain aspects such as movies, dates, actors, directors and using this to set up a pattern database which would have pre programmed responses based on the paattern of words used.
